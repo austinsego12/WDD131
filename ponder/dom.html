@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 131 DOM Basics practice page." />
+  <meta name="author" content="Austin Sego" />
+
+  <title>DOM Basics</title>
+  <link rel="stylesheet" href="dom.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <h1>DOM Basics</h1>
+    <p id="message">Choose one from the dropdown to see DOM manipulation.</p>
+
+    <label for="webdevlist">Choose One:</label>
+    <select name="code" id="webdevlist">
+      <option value="">Choose One:</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select>
+
+    <section class="card">
+      <h2 id="topicTitle">Nothing selected yet</h2>
+      <p id="topicText">Pick HTML, CSS, or JavaScript.</p>
+    </section>
+  </main>
+
+  <script src="dom.js"></script>
+</body>
+</html>
