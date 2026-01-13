@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+.wrap {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+select {
+  padding: 8px;
+  width: 220px;
+}
+
+.card {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
