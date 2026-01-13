@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WDD 131 DOM Basics practice page." />
+  <meta name="description" content="DOM Basics practice with a dropdown that manipulates page content." />
   <meta name="author" content="Austin Sego" />
 
   <title>DOM Basics</title>
@@ -11,24 +11,50 @@
 </head>
 
 <body>
-  <main class="wrap">
-    <h1>DOM Basics</h1>
-    <p id="message">Choose one from the dropdown to see DOM manipulation.</p>
+  <main class="page">
+    <h1>HTML, CSS, and JS</h1>
+    <p class="subtitle">The foundational technologies that power websites and web applications</p>
+    <div class="rule"></div>
 
-    <label for="webdevlist">Choose One:</label>
-    <select name="code" id="webdevlist">
-      <option value="">Choose One:</option>
-      <option value="html">HTML</option>
-      <option value="css">CSS</option>
-      <option value="js">JavaScript</option>
-    </select>
+    <div class="logos">
+      <img id="logoHtml" src="images/html.webp" alt="HTML logo" />
+      <img id="logoCss" src="images/css.webp" alt="CSS logo" />
+      <img id="logoJs" src="images/js.webp" alt="JavaScript logo" />
+    </div>
 
-    <section class="card">
-      <h2 id="topicTitle">Nothing selected yet</h2>
-      <p id="topicText">Pick HTML, CSS, or JavaScript.</p>
+    <section class="topics">
+      <article class="topic" id="htmlSection">
+        <h2>HyperText Markup Language</h2>
+        <p>Defines the structure and content of a web page.</p>
+        <p>Without HTML there is nothing for the browser to display.</p>
+      </article>
+
+      <article class="topic" id="cssSection">
+        <h2>Cascading Style Sheets</h2>
+        <p>Controls how the HTML elements look.</p>
+        <p>Without CSS pages look plain and unstyled.</p>
+      </article>
+
+      <article class="topic" id="jsSection">
+        <h2>JavaScript</h2>
+        <p>Adds interactivity and dynamic behavior.</p>
+        <p>Without JavaScript nothing on the page responds dynamically to user actions.</p>
+      </article>
     </section>
+
+    <div class="controls">
+      <label for="webdevlist">Choose One:</label>
+      <select name="code" id="webdevlist">
+        <option value="all">Choose One</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+      </select>
+    </div>
   </main>
 
   <script src="dom.js"></script>
 </body>
 </html>
+
+
