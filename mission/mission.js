@@ -7,11 +7,12 @@ function changeTheme() {
     logo.src = "images/byui-logo-white.png";
   } else {
     document.body.classList.remove("dark");
-    logo.src = "images/byui-logo-blue.webp";
+    logo.src = "images/byui-logo-blue.webp?v=" + Date.now();
   }
 }
 
 themeSelector.addEventListener("change", changeTheme);
+
 
 
 

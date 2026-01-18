@@ -1,53 +1,142 @@
+/* ---------- Base / Light Mode (matches the white paper screenshot) ---------- */
+
+:root {
+  --light-bg: #f3f3f3;
+  --paper-border: #9c9c9c;
+  --rule-light: #d6d6d6;
+  --subtitle-blue: #006EB6;
+
+  --dark-bg1: #4a4a4a;
+  --dark-bg2: #2b2b2b;
+  --dark-bg3: #1a1a1a;
+  --paper-dark: rgba(30, 30, 30, 0.96);
+  --paper-dark-border: rgba(255, 255, 255, 0.22);
+  --rule-dark: rgba(255, 255, 255, 0.22);
+  --subtitle-blue-dark: #7bb9ff;
+}
+
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f3f3f3;
+  min-height: 100vh;
+  background: var(--light-bg);
   color: #111;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
-header {
+/* Theme dropdown at top-left like the video */
+.theme-control {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.theme-control select {
+  padding: 0.2rem 0.35rem;
+}
+
+/* The "paper" */
+.sheet {
+  width: min(880px, calc(100% - 100px));
+  margin: 40px auto 40px;
+  background: #fff;
+  border: 1px solid var(--paper-border);
+  padding: 70px 90px 60px;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0;
   text-align: center;
-  padding: 2rem 1rem 1rem;
+  letter-spacing: 0.25rem;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
-main {
-  background: white;
-  max-width: 650px;
-  margin: 1.5rem auto 3rem;
-  padding: 3rem 3.5rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+.subtitle {
+  margin: 22px 0 10px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.35rem;
+  color: var(--subtitle-blue);
 }
 
-h1 {
-  margin: 0 0 1rem;
-  font-size: 2rem;
+.rule {
+  height: 1px;
+  background: var(--rule-light);
+  width: 82%;
+  margin: 0 auto 40px;
 }
 
-h2 {
-  color: #006EB6;
+.intro {
+  max-width: 620px;
+  margin: 0 auto 35px;
+  line-height: 1.9;
+  font-size: 1.02rem;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 0 auto 18px;
+  font-style: italic;
+  font-size: 1.02rem;
+}
+
+.list {
+  max-width: 620px;
+  margin: 0 auto;
+  padding-left: 2.2rem;
+}
+
+.list li {
+  margin: 26px 0;
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
 }
 
 #logo {
-  width: 170px;
+  width: 190px;
   height: auto;
-  display: block;
-  margin: 2rem auto 0;
 }
 
-/* Dark mode */
+/* ---------- Dark Mode (matches the video vignette screenshot) ---------- */
+
 body.dark {
-  background: #333;
-  color: white;
+  background: radial-gradient(circle at top, var(--dark-bg1) 0%, var(--dark-bg2) 45%, var(--dark-bg3) 100%);
+  color: #ffffff;
 }
 
-body.dark main {
-  background: #333;
-  box-shadow: none;
+body.dark .sheet {
+  background: var(--paper-dark);
+  border: 1px solid var(--paper-dark-border);
 }
 
-body.dark h2 {
-  color: #4ea5ff;
+body.dark .subtitle {
+  color: var(--subtitle-blue-dark);
 }
+
+body.dark .rule {
+  background: var(--rule-dark);
+}
+
+body.dark .intro,
+body.dark .lead,
+body.dark .list li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
 
 
 
