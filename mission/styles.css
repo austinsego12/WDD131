@@ -5,30 +5,12 @@ body {
   color: #111;
 }
 
-.top {
+header {
   text-align: center;
   padding: 2rem 1rem 1rem;
 }
 
-.page-title {
-  margin: 0 0 1rem;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.theme-row {
-  display: inline-flex;
-  gap: 0.5rem;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
-}
-
-select {
-  padding: 0.25rem 0.4rem;
-}
-
-.card {
+main {
   background: white;
   max-width: 650px;
   margin: 1.5rem auto 3rem;
@@ -36,82 +18,38 @@ select {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-.card-title {
-  text-align: center;
-  letter-spacing: 0.15rem;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
 }
 
-.rule {
-  height: 1px;
-  background: #cfcfcf;
-  margin: 1rem 0;
-}
-
-.rule.light {
-  width: 70%;
-  margin: 0.75rem auto 1.5rem;
-}
-
-.subtitle {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-size: 0.7rem;
-  font-family: Arial, Helvetica, sans-serif;
+h2 {
   color: #006EB6;
-  margin: 0;
 }
 
-p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.italic {
-  font-style: italic;
-  margin-top: 1.2rem;
-}
-
-ol {
-  margin-top: 0.75rem;
-}
-
-li {
-  margin: 0.6rem 0;
-}
-
-.logo-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.25rem;
-}
-
-.logo-wrap img {
+#logo {
   width: 170px;
   height: auto;
+  display: block;
+  margin: 2rem auto 0;
 }
 
-/* Dark mode styles for rubric */
+/* Dark mode */
 body.dark {
   background: #333;
   color: white;
 }
 
-body.dark .card {
+body.dark main {
   background: #333;
   box-shadow: none;
 }
 
-body.dark .rule {
-  background: #666;
-}
-
-body.dark .subtitle {
+body.dark h2 {
   color: #4ea5ff;
 }
+
+
 
 
 
