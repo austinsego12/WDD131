@@ -1,4 +1,3 @@
-/* ---------- Base / Light Mode (matches the white paper screenshot) ---------- */
 
 :root {
   --light-bg: #f3f3f3;
@@ -23,7 +22,6 @@ body {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Theme dropdown at top-left like the video */
 .theme-control {
   position: fixed;
   top: 10px;
@@ -40,7 +38,6 @@ body {
   padding: 0.2rem 0.35rem;
 }
 
-/* The "paper" */
 .sheet {
   width: min(880px, calc(100% - 100px));
   margin: 40px auto 40px;
@@ -111,7 +108,6 @@ body {
   height: auto;
 }
 
-/* ---------- Dark Mode (matches the video vignette screenshot) ---------- */
 
 body.dark {
   background: radial-gradient(circle at top, var(--dark-bg1) 0%, var(--dark-bg2) 45%, var(--dark-bg3) 100%);
