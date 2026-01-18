@@ -4,52 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mission Statement</title>
-  <meta name="description" content="BYU-Idaho Mission Statement with theme switcher." />
   <link rel="stylesheet" href="styles.css" />
   <script src="mission.js" defer></script>
 </head>
 
 <body>
-  <header class="site-header">
-    <h1>Mission Statement</h1>
+  <header class="top">
+    <h1 class="page-title">Mission Statement</h1>
 
-    <label for="themeSelector" class="theme-label">Theme</label>
-    <select id="themeSelector" class="theme-select">
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
+    <div class="theme-row">
+      <label for="themeSelector">Theme</label>
+      <select id="themeSelector">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
   </header>
 
-  <main class="content">
-    <h2 class="subtitle">Brigham Young University-Idaho</h2>
+  <main class="card">
+    <h2 class="card-title">Mission Statement</h2>
+    <div class="rule"></div>
+
+    <p class="subtitle">Brigham Young University Idaho</p>
+    <div class="rule light"></div>
 
     <p>
-      Brigham Young University-Idaho was founded and is supported and guided by
-      The Church of Jesus Christ of Latter-day Saints.
+      Brigham Young University Idaho was founded and is supported and guided by The Church of Jesus Christ of Latter day Saints.
+      Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.
     </p>
 
-    <p>
-      Its mission is to develop disciples of Jesus Christ who are leaders in their homes,
-      the Church, and their communities.
-    </p>
+    <p class="italic">The university does this by:</p>
 
-    <ul>
-      <li>Build testimonies of the restored gospel of Jesus Christ.</li>
-      <li>Provide a high-quality education that prepares students for lifelong learning.</li>
-      <li>Serve others and strengthen families.</li>
-    </ul>
+    <ol>
+      <li>Building testimonies of the restored gospel of Jesus Christ and fostering its principles in a wholesome academic, cultural, and social environment.</li>
+      <li>Providing a high quality education that prepares students of diverse interests and abilities for lifelong learning and employment.</li>
+      <li>Serving as many students as possible within resource constraints.</li>
+      <li>Delivering education that is affordable for students and the Church.</li>
+    </ol>
+
+    <div class="logo-wrap">
+      <img id="logo" src="images/byui-logo-blue.webp" alt="BYU-Idaho logo" />
+    </div>
   </main>
-
-  <footer class="site-footer">
-    <img
-      id="logo"
-      src="images/byui-logo.webp"
-      alt="BYU-Idaho logo"
-      width="160"
-      height="80"
-    />
-  </footer>
 </body>
 </html>
+
 
 

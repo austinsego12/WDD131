@@ -1,61 +1,117 @@
-:root {
-  --subtitle-blue: #006EB6;
-}
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  line-height: 1.6;
-  background: white;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f3f3f3;
   color: #111;
 }
 
-.site-header {
-  padding: 1.25rem;
+.top {
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  padding: 2rem 1rem 1rem;
 }
 
-.theme-label {
-  margin-right: 0.5rem;
-  font-weight: 600;
+.page-title {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.theme-select {
-  padding: 0.4rem 0.6rem;
+.theme-row {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
 }
 
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1.25rem;
+select {
+  padding: 0.25rem 0.4rem;
+}
+
+.card {
+  background: white;
+  max-width: 650px;
+  margin: 1.5rem auto 3rem;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  text-align: center;
+  letter-spacing: 0.15rem;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+.rule {
+  height: 1px;
+  background: #cfcfcf;
+  margin: 1rem 0;
+}
+
+.rule.light {
+  width: 70%;
+  margin: 0.75rem auto 1.5rem;
 }
 
 .subtitle {
-  color: var(--subtitle-blue);
-  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #006EB6;
+  margin: 0;
 }
 
-.site-footer {
+p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.italic {
+  font-style: italic;
+  margin-top: 1.2rem;
+}
+
+ol {
+  margin-top: 0.75rem;
+}
+
+li {
+  margin: 0.6rem 0;
+}
+
+.logo-wrap {
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
-  border-top: 1px solid #ddd;
+  margin-top: 2.25rem;
 }
 
-/* Dark theme */
+.logo-wrap img {
+  width: 170px;
+  height: auto;
+}
+
+/* Dark mode styles for rubric */
 body.dark {
   background: #333;
   color: white;
 }
 
-body.dark .site-header,
-body.dark .site-footer {
-  border-color: #555;
+body.dark .card {
+  background: #333;
+  box-shadow: none;
+}
+
+body.dark .rule {
+  background: #666;
 }
 
 body.dark .subtitle {
   color: #4ea5ff;
 }
+
 
 
