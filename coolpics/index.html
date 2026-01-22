@@ -3,71 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>📷 Cool Pics</title>
+  <title>Cool Pics 📷</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <span class="brand-icon" aria-hidden="true">📷</span>
-      <span class="site-title">Cool Pics</span>
-    </div>
+    <h1 class="site-title">Cool Pics 📷</h1>
+
+    <button class="menu-button" type="button">
+      Menu
+    </button>
 
     <nav class="site-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <a href="#">Home</a>
+      <a href="#">People</a>
+      <a href="#">Places</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="intro">
-      <h1>📷 Cool Pics</h1>
-      <p>
-        A simple responsive gallery that uses
-        <code>object-fit: cover;</code>
-        to keep images looking consistent while they fill their boxes.
-      </p>
-    </section>
+  <main class="page-main">
+    <section class="content">
+      <h2 class="section-title">Current Work</h2>
 
-    <section class="gallery">
-      <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo one">
-        <figcaption>Photo one</figcaption>
-      </figure>
-      <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo two">
-        <figcaption>Photo two</figcaption>
-      </figure>
-      <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo three">
-        <figcaption>Photo three</figcaption>
-      </figure>
-      <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo four">
-        <figcaption>Photo four</figcaption>
-      </figure>
-      <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo five">
-        <figcaption>Photo five</figcaption>
-      </figure>
-      <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo six">
-        <figcaption>Photo six</figcaption>
-      </figure>
+      <section class="gallery">
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 1">
+        </figure>
+        <figure>
+          <img src="images/npic2.jpg" alt="Gallery image 2">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 3">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 4">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 5">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 6">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 7">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 8">
+        </figure>
+        <figure>
+          <img src="images/norris-sm.jpg" alt="Gallery image 9">
+        </figure>
+      </section>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Cool Pics</p>
+    <p>&copy;2015 Not a real site 😀</p>
   </footer>
-
-  <script>
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
 
