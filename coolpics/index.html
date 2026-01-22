@@ -9,11 +9,10 @@
 <body>
   <header class="site-header">
     <div class="brand">
-      <img src="images/byui-logo_white.png" alt="BYU Idaho logo" class="logo">
+      <span class="brand-icon" aria-hidden="true">📷</span>
       <span class="site-title">Cool Pics</span>
     </div>
 
-    <!-- mobile -->
     <nav class="site-nav">
       <ul>
         <li><a href="#">Home</a></li>
@@ -29,33 +28,33 @@
       <p>
         A simple responsive gallery that uses
         <code>object-fit: cover;</code>
-        to keep images looking nice while they fill their boxes.
+        to keep images looking consistent while they fill their boxes.
       </p>
     </section>
 
     <section class="gallery">
       <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo one">
+        <img src="images/pic1.jpg" alt="Scenic photo one">
         <figcaption>Photo one</figcaption>
       </figure>
       <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo two">
+        <img src="images/pic2.jpg" alt="Scenic photo two">
         <figcaption>Photo two</figcaption>
       </figure>
       <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo three">
+        <img src="images/pic3.jpg" alt="Scenic photo three">
         <figcaption>Photo three</figcaption>
       </figure>
       <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo four">
+        <img src="images/pic4.jpg" alt="Scenic photo four">
         <figcaption>Photo four</figcaption>
       </figure>
       <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo five">
+        <img src="images/pic5.jpg" alt="Scenic photo five">
         <figcaption>Photo five</figcaption>
       </figure>
       <figure>
-        <img src="images/norris-sm.jpg" alt="Scenic photo six">
+        <img src="images/pic6.jpg" alt="Scenic photo six">
         <figcaption>Photo six</figcaption>
       </figure>
     </section>
@@ -66,8 +65,9 @@
   </footer>
 
   <script>
-    // Just for a live year in the footer
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
