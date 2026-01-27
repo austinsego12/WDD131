@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Base styles: MOBILE FIRST */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Roboto, sans-serif;
@@ -18,37 +24,30 @@ footer {
   background-color: lightblue;
 }
 
+/* HEADER / NAV */
+
+header {
+  position: relative;
+}
+
 h1 {
   text-align: center;
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 
-section {
-  padding: 20px;
-  background-color: white;
-  margin: 1em 0;
-  border: 1px solid #ccc;
-}
-
-nav a {
-  padding: 20px;
-  color: black;
-  display: none; 
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: none;
-  color: #616061;
-}
+/* menu button (hamburger) */
 
 .menu-btn {
   cursor: pointer;
   border: none;
   background-color: transparent;
   padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
+/* bars in the hamburger icon */
 
 .bar1,
 .bar2,
@@ -57,16 +56,65 @@ nav a:hover {
   height: 4px;
   background-color: black;
   margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* nav for mobile: stacked links */
+
+nav {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem;
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #616061;
+}
+
+/* hide class used by JS and initial mobile state */
+
+.hide {
+  display: none;
+}
+
+/* MAIN CONTENT */
+
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 1em 0;
+  border: 1px solid #ccc;
 }
 
 footer {
   text-align: center;
 }
 
+/* ANIMATION: transform hamburger into "X" when .change is on the button */
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* ============================= */
+/*  Larger screens (700px +)     */
+/* ============================= */
 
 @media screen and (min-width: 700px) {
-
-  
   header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -74,14 +122,18 @@ footer {
     gap: 1rem;
   }
 
-  
+  /* hide the hamburger button on bigger screens */
   .menu-btn {
     display: none;
   }
 
-  
+  /* show nav horizontally on larger screens */
   nav {
+    margin-top: 0;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
   }
 
   nav a {
@@ -89,7 +141,12 @@ footer {
     padding: 0.5rem 1rem;
   }
 
-  
+  /* override .hide so nav is always visible on big screens */
+  nav.hide {
+    display: flex;
+  }
+
+  /* scripture sections in a 3-column grid */
   main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -97,6 +154,7 @@ footer {
   }
 
   section {
-    margin: 0; 
+    margin: 0;
   }
 }
+

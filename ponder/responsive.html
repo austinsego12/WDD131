@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Responsive Design Scriptures</title>
-  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="responsive.css" />
 </head>
 <body>
   <header>
     <h1>Responsive Design 📖 Scriptures</h1>
-    <button class="menu-btn">
+    <button class="menu-btn" aria-label="Toggle navigation menu">
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
     </button>
-    <nav>
+
+    <!-- nav starts hidden on mobile with the 'hide' class -->
+    <nav class="hide">
       <a href="#">Home</a>
       <a href="#">Scriptures</a>
       <a href="#">Favorites</a>
@@ -59,7 +61,11 @@
   </main>
 
   <footer>
-    Austin Sego
+    <!-- Austin Sego -->
+    Your Name
   </footer>
+
+  <script src="responsive.js"></script>
 </body>
 </html>
+
