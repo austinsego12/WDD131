@@ -3,39 +3,47 @@ const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
-// Open modal when clicking a thumbnail
+// Open modal when a thumbnail is clicked
 gallery.addEventListener('click', openModal);
 
 function openModal(e) {
-  // Only respond if they clicked an <img>, not empty space
-  const clickedImage = e.target;
-  if (clickedImage.tagName !== 'IMG') {
-    return;
-  }
+    const clicked = e.target;
 
-  // Get the small image source, e.g. "images/book-sm.jpg"
-  const smallSrc = clickedImage.getAttribute('src');
+    // Only respond if an image was clicked
+    if (clicked.tagName !== 'IMG') {
+        return;
+    }
 
-  // Build the large image source by switching "-sm" to "-lg"
-  // e.g. "images/book-sm.jpg" → "images/book-lg.jpg"
-  const largeSrc = smallSrc.replace('-sm', '-lg');
+    // Small image src, e.g. "images/book-sm.jpg"
+    const smallSrc = clicked.getAttribute('src');
 
-  // Set modal image src and alt
-  modalImage.src = largeSrc;
-  modalImage.alt = clickedImage.alt || '';
+    // Convert to full image src, e.g. "images/book-full.jpg"
+    const bigSrc = smallSrc.replace('-sm', '-full');
 
-  // Show the modal
-  modal.showModal();
+    // Set modal image src and alt
+    modalImage.setAttribute('src', bigSrc);
+    modalImage.setAttribute('alt', clicked.getAttribute('alt'));
+
+    // Show the modal
+    modal.showModal();
 }
 
-// Close modal on button click
+// Close modal on X button
 closeButton.addEventListener('click', () => {
-  modal.close();
+    modal.close();
 });
 
-// Close modal if clicking outside the image (dark background)
+// Close modal when clicking outside the image (on the dark overlay)
 modal.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.close();
-  }
+    if (event.target === modal) {
+        modal.close();
+    }
 });
+
+// Close modal with Esc key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.open) {
+        modal.close();
+    }
+});
+
