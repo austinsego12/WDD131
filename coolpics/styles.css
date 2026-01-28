@@ -16,6 +16,7 @@ body {
   color: #ffffff;
   text-align: center;
   padding: 1rem 0.5rem;
+  position: relative; /* so we can position the menu button */
 }
 
 .site-title {
@@ -24,21 +25,59 @@ body {
   font-weight: 600;
 }
 
-/* Mobile menu button */
+/* Mobile menu button (hamburger) */
 .menu-button {
   margin-top: 0.5rem;
-  padding: 0.25rem 1.25rem;
   border-radius: 4px;
-  border: 1px solid #ffffff;
+  border: none;
   background-color: transparent;
   color: #ffffff;
-  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+
+/* bars inside the menu button */
+.menu-button .bar1,
+.menu-button .bar2,
+.menu-button .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 3px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* helper class to hide things */
+.hide {
+  display: none;
+}
+
+/* animate hamburger to X when the button gets class 'change' */
+.menu-button.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.menu-button.change .bar2 {
+  opacity: 0;
+}
+
+.menu-button.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
 }
 
 /* Navigation */
 .site-nav {
   margin-top: 0.5rem;
-  display: none;
+  /* display will be controlled by .hide and media queries */
 }
 
 .site-nav a {
@@ -89,6 +128,7 @@ body {
   object-fit: cover;
   border: 4px solid #ffffff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  cursor: pointer; /* clickable for modal */
 }
 
 /* Footer */
@@ -103,7 +143,7 @@ body {
 /* Tablet layout */
 @media (min-width: 600px) {
   .menu-button {
-    display: none;
+    display: none; /* no hamburger on tablet/desktop */
   }
 
   .gallery {
@@ -117,9 +157,47 @@ body {
     display: block;
   }
 
+  /* nav should show even if it still has 'hide' class */
+  .site-nav.hide {
+    display: block;
+  }
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* MODAL STYLES */
+
+dialog.viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+dialog.viewer::backdrop {
+  background: transparent;
+}
+
+dialog.viewer img {
+  width: 90%;
+  display: block;
+  margin: 20vh auto;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10vh;
+  right: 2vh;
+  padding: 3px 6px;
+  font-size: 1.5em;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Modal and layout tweaks on larger screens *
 
 

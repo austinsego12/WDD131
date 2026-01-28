@@ -10,11 +10,15 @@
   <header class="site-header">
     <h1 class="site-title">Cool Pics 📷</h1>
 
-    <button class="menu-button" type="button">
-      Menu
+    <!-- Mobile menu button (hamburger) -->
+    <button class="menu-button" type="button" aria-label="Toggle navigation menu">
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
     </button>
 
-    <nav class="site-nav">
+    <!-- Nav starts hidden on small screens with the 'hide' class -->
+    <nav class="site-nav hide">
       <a href="#">Home</a>
       <a href="#">People</a>
       <a href="#">Places</a>
@@ -59,10 +63,20 @@
     </section>
   </main>
 
+  <!-- Modal viewer for the big image -->
+  <dialog class="viewer">
+    <img alt="">
+    <button class="close-viewer" type="button">X</button>
+  </dialog>
+
   <footer class="site-footer">
     <p>&copy;2015 Not a real site </p>
   </footer>
+
+  <!-- JS for menu and modal -->
+  <script src="coolpics.js"></script>
 </body>
 </html>
+
 
 
