@@ -4,38 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kids Read For Fun</title>
-  <meta name="description" content="A simple book blog layout using CSS Grid." />
+  <meta name="description" content="Kids Read For Fun book blog layout using CSS Grid." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a class="skiplink" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <div class="page">
-    <header class="siteheader">
-      <h1>Kids Read For Fun</h1>
+    <header class="header">
+      <h1 class="site-title">Kids Read For Fun</h1>
 
-      <nav aria-label="Primary">
-        <ul class="navlinks">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Archive</a></li>
-          <li><a href="#">Search</a></li>
-        </ul>
+      <nav class="nav" aria-label="Primary">
+        <a href="#">About</a>
+        <a href="#">Archive</a>
+        <a href="#">Search</a>
       </nav>
     </header>
 
-    <main id="main" class="layout">
-      <aside class="meta" aria-label="Book details">
-        <p class="metaitem">July 5, 2022</p>
-        <p class="metaitem">10-14</p>
-        <p class="metaitem">Fantasy</p>
-        <p class="stars" aria-label="Rating 4 out of 5" title="Rating 4 out of 5">
-          ★★★★☆
-        </p>
+    <main id="main" class="content">
+      <aside class="details" aria-label="Book details">
+        <p>July 5, 2022</p>
+        <p>10-14</p>
+        <p>Fantasy</p>
+        <p class="rating" aria-label="Rating 4 out of 5" title="Rating 4 out of 5">★★★★☆</p>
       </aside>
 
-      <article class="post">
-        <h2>Septimus Heap Book One: Magyk</h2>
+      <article class="post" aria-labelledby="book-title">
+        <h2 id="book-title">Septimus Heap Book One: Magyk</h2>
 
         <img
           class="cover"
@@ -52,11 +48,12 @@
       </article>
     </main>
 
-    <footer class="sitefooter">
-      <p>Jane Doe</p>
+    <footer class="footer">
+      <p>Austin Sego</p>
     </footer>
   </div>
 </body>
 </html>
+
 
 
