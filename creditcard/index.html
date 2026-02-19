@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Form</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main class="page">
+      <h1 class="title">💳 Credit Card Checkout</h1>
+
+      <section class="errors" aria-live="polite"></section>
+
+      <form id="cardForm" class="card-layout" novalidate>
+        <!-- Card Back (behind) -->
+        <div class="card card-back" aria-hidden="true">
+          <div class="magstripe"></div>
+
+          <div class="cvc-row">
+            <label for="cvc">CVC</label>
+            <input
+              type="text"
+              id="cvc"
+              name="cvc"
+              inputmode="numeric"
+              pattern="^[0-9]{3,4}$"
+              minlength="3"
+              maxlength="4"
+              placeholder="123"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Card Front (on top) -->
+        <div class="card card-front">
+          <div class="front-top">
+            <div class="chip"></div>
+            <div class="brand">VISA</div>
+          </div>
+
+          <div class="field">
+            <label for="cardNumber">Card Number</label>
+            <input
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              inputmode="numeric"
+              pattern="^[0-9]{16}$"
+              minlength="16"
+              maxlength="16"
+              placeholder="1234123412341234"
+              required
+            />
+          </div>
+
+          <div class="two-col">
+            <div class="field">
+              <label for="cardHolder">Card Holder</label>
+              <input
+                type="text"
+                id="cardHolder"
+                name="cardHolder"
+                placeholder="Austin Sego"
+                required
+              />
+            </div>
+
+            <div id="cardExpiration" class="field exp">
+              <label id="expirationDate" for="month">EXPIRATION</label>
+              <div class="exp-inputs">
+                <input
+                  type="text"
+                  id="month"
+                  name="expMonth"
+                  placeholder="MM"
+                  inputmode="numeric"
+                  pattern="^(0[1-9]|1[0-2])$"
+                  minlength="2"
+                  maxlength="2"
+                  aria-labelledby="expirationDate"
+                  required
+                />
+                <input
+                  type="text"
+                  id="year"
+                  name="expYear"
+                  placeholder="YY"
+                  inputmode="numeric"
+                  pattern="^[0-9]{2}$"
+                  minlength="2"
+                  maxlength="2"
+                  aria-labelledby="expirationDate"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="submit" type="submit">Submit Payment</button>
+      </form>
+
+      <p id="successMsg" class="success hide" role="status" aria-live="polite">
+        Payment accepted. Thank you.
+      </p>
+    </main>
+  </body>
+</html>
