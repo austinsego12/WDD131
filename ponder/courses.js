@@ -37,15 +37,11 @@ function renderSections(sections) {
     sections.map(sectionTemplate).join("");
 }
 
-// headings
-document.querySelector("#courseName").textContent = aCourse.name;
-document.querySelector("#courseCode").textContent = aCourse.code;
+document.addEventListener("DOMContentLoaded", () => {
+  renderSections(aCourse.sections);
 
-// initial render
-renderSections(aCourse.sections);
-
-// click event
-document.querySelector("#enrollStudent").addEventListener("click", () => {
-  const sectionNum = document.querySelector("#sectionNumber").value;
-  aCourse.enrollStudent(sectionNum);
+  document.querySelector("#enrollStudent").addEventListener("click", () => {
+    const sectionNum = document.querySelector("#sectionNumber").value;
+    aCourse.enrollStudent(sectionNum);
+  });
 });

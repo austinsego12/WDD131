@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses</title>
+  <style>
+    body { font-family: "Times New Roman", Times, serif; }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    table { border-collapse: collapse; }
+
+    th, td {
+      padding-right: 14px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    th {
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="controls">
+    <label for="sectionNumber">Section Number</label>
+    <input id="sectionNumber" type="number" min="1" />
+    <button id="enrollStudent" type="button">Enroll Student</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Section#</th>
+        <th>Room#</th>
+        <th>#Enrolled</th>
+        <th>Days</th>
+        <th>Instructor</th>
+      </tr>
+    </thead>
+    <tbody id="sections"></tbody>
+  </table>
+
+  <script src="courses.js" defer></script>
+</body>
+</html>
