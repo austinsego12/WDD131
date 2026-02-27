@@ -6,7 +6,7 @@ const character = {
   class: "Diplomat",
   level: 1,
   health: 100,
-  image: "images/swamp-beast-diplomat.jpg",
+  image: "images/swamp-beast-diplomat.webp",
 
   attacked() {
     if (this.health <= 0) return;
