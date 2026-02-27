@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WDD 131 Character Card using a JavaScript object with properties and methods." />
+
+  <title>Character Card</title>
+
+  <!-- Social media meta information -->
+  <meta property="og:title" content="Character Card" />
+  <meta property="og:description" content="A character card built with a JavaScript object, including attacked and levelUp methods." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/swamp-beast-diplomat.jpg" />
+  <meta property="og:url" content="" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Character Card" />
+  <meta name="twitter:description" content="A character card built with a JavaScript object, including attacked and levelUp methods." />
+  <meta name="twitter:image" content="images/swamp-beast-diplomat.jpg" />
+
+  <link rel="stylesheet" href="charactercard.css" />
+  <script defer src="charactercard.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Character Card</h1>
+    <p>WDD 131 Prove</p>
+  </header>
+
+  <main>
+    <article class="card" aria-labelledby="charName">
+      <img
+        id="charImage"
+        class="card-image"
+        src="images/swamp-beast-diplomat.jpg"
+        alt="Swamp Beast Diplomat"
+        width="900"
+        height="600"
+        loading="lazy"
+      />
+
+      <div class="card-body">
+        <h2 id="charName"></h2>
+
+        <dl class="stats" aria-label="Character stats">
+          <div class="stat">
+            <dt>Class</dt>
+            <dd id="charClass"></dd>
+          </div>
+
+          <div class="stat">
+            <dt>Level</dt>
+            <dd id="charLevel"></dd>
+          </div>
+
+          <div class="stat">
+            <dt>Health</dt>
+            <dd id="charHealth"></dd>
+          </div>
+        </dl>
+
+        <div class="buttons" role="group" aria-label="Actions">
+          <button id="attackBtn" type="button">Attacked</button>
+          <button id="levelUpBtn" type="button">Level Up</button>
+          <button id="resetBtn" type="button" class="secondary">Reset</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <small>WDD 131 Character Card</small>
+  </footer>
+</body>
+</html>
