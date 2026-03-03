@@ -1,0 +1,104 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  color: #111;
+}
+
+.main-nav a:hover {
+  background: #f2f2f2;
+}
+
+hr {
+  margin-top: 50px;
+}
+
+/* MEDIA CARD */
+.media-card-container {
+  margin-top: 1rem;
+}
+
+.media-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.media-card-image,
+.media-card > div:first-child {
+  flex: 0 0 280px;
+}
+
+.media-card-content {
+  flex: 1;
+}
+
+.media-card-content h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.media-card-content p {
+  margin: 0;
+}
+
+/* GALLERY */
+.gallery-container {
+  margin-top: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gallery .media-card {
+  flex: 1 1 320px;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+/* RESPONSIVE: stack cards on smaller screens */
+@media (max-width: 700px) {
+  .media-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .media-card-image,
+  .media-card > div:first-child {
+    flex: 0 0 auto;
+  }
+}
