@@ -66,11 +66,11 @@ const searchInput = document.querySelector("#search");
 const searchButton = document.querySelector("#searchButton");
 
 function tagTemplate(tags) {
-  return tags.map(tag => `<button>${tag}</button>`).join("");
+  return tags.map(tag => `<button>${tag}</button>`).join(" ");
 }
 
 function difficultyTemplate(rating) {
-  let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5">Difficulty: `;
+  let html = `<span class="rating" role="img" aria-label="${rating} out of 5">Difficulty: `;
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
       html += `<span aria-hidden="true">🥾</span>`;
@@ -85,13 +85,11 @@ function difficultyTemplate(rating) {
 function hikesTemplate(hike) {
   return `
     <div class="hike-card">
-      <img src="${hike.imgSrc}" alt="${hike.imgAlt}">
       <div class="hike-content">
         <h2>${hike.name}</h2>
         <div class="hike-tags">
           ${tagTemplate(hike.tags)}
         </div>
-        <p><strong>Distance:</strong> ${hike.distance}</p>
         <p>${hike.description}</p>
         <p>${difficultyTemplate(hike.difficulty)}</p>
       </div>
@@ -112,7 +110,7 @@ function compareHikes(a, b) {
 }
 
 function searchHikes() {
-  const hikeQuery = searchInput.value.toLowerCase().trim();
+  const hikeQuery = searchInput.value.toLowerCase();
 
   const filteredHikes = hikes.filter(hike => {
     return (
@@ -126,11 +124,6 @@ function searchHikes() {
 
   hikeContainer.innerHTML = "";
 
-  if (sortedHikes.length === 0) {
-    hikeContainer.innerHTML = `<div class="no-results"><p>No hikes matched your search.</p></div>`;
-    return;
-  }
-
   sortedHikes.forEach(hike => {
     renderHike(hike);
   });
@@ -142,13 +135,8 @@ function handleEnter(event) {
   }
 }
 
-function showRandomHike() {
-  const randomNum = Math.floor(Math.random() * hikes.length);
-  hikeContainer.innerHTML = "";
-  renderHike(hikes[randomNum]);
-}
-
 searchButton.addEventListener("click", searchHikes);
 searchInput.addEventListener("keypress", handleEnter);
 
-showRandomHike();
+const randomNum = Math.floor(Math.random() * hikes.length);
+renderHike(hikes[randomNum]);

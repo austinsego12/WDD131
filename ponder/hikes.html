@@ -3,99 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hike Search App</title>
+  <title>Sorting Activities</title>
   <script defer src="hikes.js"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f7f7f7;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    .search-bar {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    input {
-      flex: 1;
-      min-width: 220px;
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 16px;
-      font-size: 16px;
-      cursor: pointer;
-      border: 1px solid #999;
-      background: white;
-      border-radius: 6px;
-    }
-
-    .hike-card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .hike-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hike-content {
-      padding: 16px;
-    }
-
-    .hike-content h2 {
-      margin-top: 0;
-    }
-
-    .hike-tags {
-      margin: 10px 0;
-    }
-
-    .hike-tags button {
-      margin-right: 8px;
-      margin-bottom: 8px;
-      background-color: #eef5ff;
-      border: 1px solid #c7dcff;
-    }
-
-    .rating {
-      font-size: 18px;
-    }
-
-    .no-results {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-    }
-  </style>
 </head>
 <body>
-  <h1>Hike Search App</h1>
-
-  <div class="search-bar">
-    <label for="search" style="align-self: center;">Enter Search</label>
-    <input id="search" type="text" placeholder="Search hikes, descriptions, or tags">
-    <button id="searchButton">Search</button>
-  </div>
+  <label for="search">Enter Search</label>
+  <input id="search" type="text">
+  <button id="searchButton">Search</button>
 
   <div id="hike-container"></div>
 </body>
