@@ -3,44 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipe Book | Apple Crisp</title>
+  <title>Recipe Book</title>
   <meta
     name="description"
-    content="Recipe Book features a delicious apple crisp recipe with ratings, tags, and a clean responsive layout."
+    content="Recipe Book features delicious recipes with ratings, tags, and a clean responsive layout."
   >
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Recipe Book | Apple Crisp">
+  <meta property="og:title" content="Recipe Book">
   <meta
     property="og:description"
-    content="A cozy apple crisp recipe with a clean responsive design built with flexbox."
+    content="Search and discover delicious recipes in a clean responsive layout."
   >
-  <meta property="og:url" content="https://austinsego12.github.io/wdd131/recipes/">
-  <meta property="og:image" content="https://austinsego12.github.io/wdd131/recipes/images/social-preview.jpg">
+  <meta property="og:url" content="https://austinsego12.github.io/WDD131/recipes/">
+  <meta property="og:image" content="https://austinsego12.github.io/WDD131/recipes/images/social-preview.jpg">
 
-  <!-- X Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Recipe Book | Apple Crisp">
+  <meta name="twitter:title" content="Recipe Book">
   <meta
     name="twitter:description"
-    content="A cozy apple crisp recipe with a clean responsive design built with flexbox."
+    content="Search and discover delicious recipes in a clean responsive layout."
   >
-  <meta name="twitter:image" content="https://austinsego12.github.io/wdd131/recipes/images/social-preview.jpg">
+  <meta name="twitter:image" content="https://austinsego12.github.io/WDD131/recipes/images/social-preview.jpg">
 
-  <!-- Icons -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arial:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="recipes.css">
+  <script src="recipes.js" type="module" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -49,9 +46,9 @@
       <h1>Recipe Book</h1>
     </div>
 
-    <form class="search-form" action="#" method="get">
-      <label for="search" class="visually-hidden">Search recipes</label>
-      <input type="search" id="search" name="search" placeholder="Find a recipe">
+    <form class="search-form" id="searchForm">
+      <label for="searchInput" class="visually-hidden">Search recipes</label>
+      <input type="search" id="searchInput" name="search" placeholder="Find a recipe">
       <button type="submit" aria-label="Search">
         <img src="images/search.svg" alt="">
       </button>
@@ -59,42 +56,11 @@
   </header>
 
   <main>
-    <article class="recipe-card">
-      <div class="recipe-image">
-        <img src="images/apple-crisp.jpg" alt="Fresh baked apple crisp in a dish">
-      </div>
-
-      <div class="recipe-content">
-        <div class="recipe-tags">
-          <span>dessert</span>
-        </div>
-
-        <h2>Apple Crisp</h2>
-
-        <span
-          class="rating"
-          role="img"
-          aria-label="Rating: 4 out of 5 stars"
-        >
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star">⭐</span>
-          <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-
-        <p class="recipe-description">
-          This apple crisp is warm, sweet, and full of cinnamon flavor. It is
-          topped with a buttery oat crumble and baked until golden brown. Serve
-          it fresh from the oven by itself or with a scoop of vanilla ice cream.
-        </p>
-      </div>
-    </article>
+    <section id="recipeContainer"></section>
   </main>
 
   <footer class="site-footer">
     <div class="social">
-      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
       <a href="#" aria-label="Visit our Instagram page">
         <img src="images/instagram_icon.svg" alt="Instagram icon">
       </a>
