@@ -9,26 +9,30 @@
     content="Recipe Book features delicious recipes with ratings, tags, and a clean responsive layout."
   >
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Recipe Book">
   <meta
     property="og:description"
     content="Search and discover delicious recipes in a clean responsive layout."
   >
-  <meta property="og:url" content="https://austinsego12.github.io/WDD131/recipes/">
-  <meta property="og:image" content="https://austinsego12.github.io/WDD131/recipes/images/social-preview.jpg">
+  <meta property="og:url" content="https://austinsego12.github.io/wdd131/recipes/">
+  <meta property="og:image" content="https://austinsego12.github.io/wdd131/recipes/images/social-preview.jpg">
 
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Recipe Book">
   <meta
     name="twitter:description"
     content="Search and discover delicious recipes in a clean responsive layout."
   >
-  <meta name="twitter:image" content="https://austinsego12.github.io/WDD131/recipes/images/social-preview.jpg">
+  <meta name="twitter:image" content="https://austinsego12.github.io/wdd131/recipes/images/social-preview.jpg">
 
+  <!-- Icons -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -48,7 +52,12 @@
 
     <form class="search-form" id="searchForm">
       <label for="searchInput" class="visually-hidden">Search recipes</label>
-      <input type="search" id="searchInput" name="search" placeholder="Find a recipe">
+      <input
+        type="search"
+        id="searchInput"
+        name="search"
+        placeholder="Find a recipe"
+      >
       <button type="submit" aria-label="Search">
         <img src="images/search.svg" alt="">
       </button>
@@ -56,11 +65,18 @@
   </header>
 
   <main>
-    <section id="recipeContainer"></section>
+    <section id="recipeContainer" aria-label="Recipes"></section>
   </main>
 
   <footer class="site-footer">
+    <p>
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+        Recipe icons created by Freepik - Flaticon
+      </a>
+    </p>
+
     <div class="social">
+      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
       <a href="#" aria-label="Visit our Instagram page">
         <img src="images/instagram_icon.svg" alt="Instagram icon">
       </a>
@@ -71,12 +87,6 @@
         <img src="images/pinterest_icon.svg" alt="Pinterest icon">
       </a>
     </div>
-
-    <p>
-      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
-        Recipe icons created by Freepik - Flaticon
-      </a>
-    </p>
   </footer>
 </body>
 </html>
