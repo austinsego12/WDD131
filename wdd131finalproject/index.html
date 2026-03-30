@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiftLog | Home</title>
+  <meta name="description" content="LiftLog helps users track workouts, monitor progress, and stay consistent.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/appjs.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="LiftLog logo">
+        <span>LiftLog</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a class="active" href="index.html">HOME</a></li>
+          <li><a href="workout.html">EXERCISES</a></li>
+          <li><a href="index.html#progress">PROGRESS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="panel hero-panel">
+      <div class="hero-image-box">
+        <img src="images/hero.svg" alt="Workout illustration">
+        <div class="hero-text-overlay">
+          <h1>Build Strength. Track Progress.<br>Stay Consistent.</h1>
+          <div class="hero-image-label">Hero Image</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button" href="workout.html">Start Tracking</a>
+        <a class="button" href="workout.html#exercise">View Exercises</a>
+      </div>
+    </section>
+
+    <section class="panel features-panel">
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🖼️</div>
+          <h2>Feature</h2>
+          <p>Track daily workouts and exercise details.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🖼️</div>
+          <h2>Feature</h2>
+          <p>Browse exercises by muscle group.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🖼️</div>
+          <h2>Feature</h2>
+          <p>Save your progress directly in the browser.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="progress" class="panel progress-panel">
+      <h2 class="section-title">Progress Overview</h2>
+      <div class="progress-grid">
+        <div class="chart-box">
+          <div class="fake-chart">
+            <span class="chart-line line1"></span>
+            <span class="chart-line line2"></span>
+            <span class="chart-line line3"></span>
+            <span class="chart-line line4"></span>
+            <span class="chart-line line5"></span>
+          </div>
+        </div>
+
+        <aside class="motivation-card">
+          <h3>Stay Motivated!</h3>
+          <p id="motivationText">Start your first workout today and build momentum one session at a time.</p>
+          <div class="stats-preview">
+            <p><strong>Total Workouts:</strong> <span id="totalWorkouts">0</span></p>
+            <p><strong>Total Sets:</strong> <span id="totalSets">0</span></p>
+            <p><strong>Total Reps:</strong> <span id="totalReps">0</span></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 LiftLog | Built by Austin Sego for WDD131</p>
+  </footer>
+</body>
+</html>
