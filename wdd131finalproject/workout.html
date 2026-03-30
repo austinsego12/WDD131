@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiftLog | Workout Log</title>
+  <meta name="description" content="Log workouts, save progress, and review workout history with LiftLog.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/appjs.js" defer></script>
+</head>
+<body data-page="workout">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="home.html">
+        <img src="images/logo.svg" alt="LiftLog logo">
+        <span>LiftLog</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a class="active" href="workout.html">EXERCISES</a></li>
+          <li><a href="home.html#progress">PROGRESS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="panel workout-panel">
+      <h1>Workout Log</h1>
+
+      <form id="workoutForm" class="workout-form" novalidate>
+        <div class="form-row">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-row" id="exercise">
+          <label for="exerciseInput">Exercise:</label>
+          <input type="text" id="exerciseInput" name="exercise" list="exerciseOptions" placeholder="Choose or type an exercise" required>
+          <datalist id="exerciseOptions"></datalist>
+        </div>
+
+        <div class="form-row">
+          <label for="sets">Sets:</label>
+          <input type="number" id="sets" name="sets" min="1" placeholder="Example: 4" required>
+        </div>
+
+        <div class="form-row">
+          <label for="reps">Reps:</label>
+          <input type="number" id="reps" name="reps" min="1" placeholder="Example: 8" required>
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Notes:</label>
+          <textarea id="notes" name="notes" placeholder="How did the workout feel?"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button id="submitButton" class="button" type="submit">Save Workout</button>
+        </div>
+
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <section class="saved-panel">
+        <h2>Saved Workouts</h2>
+        <div id="savedWorkouts" class="saved-workouts"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 LiftLog | Built by Austin Sego for WDD131</p>
+  </footer>
+</body>
+</html>

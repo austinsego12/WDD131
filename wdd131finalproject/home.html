@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiftLog | Home</title>
+  <meta name="description" content="LiftLog helps users track workouts, monitor progress, and stay consistent.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/appjs.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="home.html">
+        <img src="images/logo.svg" alt="LiftLog logo">
+        <span>LiftLog</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a class="active" href="home.html">Home</a></li>
+          <li><a href="workout.html">Workout Log</a></li>
+          <li><a href="#progress">Progress</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="panel hero-panel">
+      <div class="hero-media">
+        <img src="images/hero.svg" alt="Fitness dashboard illustration with dumbbell and chart">
+        <div class="hero-overlay">
+          <h1>Build Strength. Track Progress. Stay Consistent.</h1>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="button" href="workout.html">Start Tracking</a>
+        <a class="button button-alt" href="workout.html#exercise">View Exercises</a>
+      </div>
+    </section>
+
+    <section class="panel features-panel">
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">💪</div>
+          <h2>Save Workouts</h2>
+          <p>Track each session with exercises, sets, reps, and notes so you can see steady progress.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📋</div>
+          <h2>Choose Exercises</h2>
+          <p>Use the workout page suggestions to quickly choose exercises for legs, chest, back, shoulders, and arms.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📈</div>
+          <h2>Stay Motivated</h2>
+          <p>Your progress area updates automatically and helps you keep momentum through simple, clear feedback.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="progress" class="panel progress-panel">
+      <h2 class="section-title">Progress Overview</h2>
+
+      <div class="progress-grid">
+        <div class="chart-card">
+          <div class="bar-row">
+            <div class="bar-top">
+              <span>Total Workouts</span>
+              <strong id="totalWorkouts">0</strong>
+            </div>
+            <div class="bar-track">
+              <span class="bar-fill" id="workoutBar"></span>
+            </div>
+          </div>
+
+          <div class="bar-row">
+            <div class="bar-top">
+              <span>Total Sets</span>
+              <strong id="totalSets">0</strong>
+            </div>
+            <div class="bar-track">
+              <span class="bar-fill" id="setsBar"></span>
+            </div>
+          </div>
+
+          <div class="bar-row">
+            <div class="bar-top">
+              <span>Total Reps</span>
+              <strong id="totalReps">0</strong>
+            </div>
+            <div class="bar-track">
+              <span class="bar-fill" id="repsBar"></span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="motivation-card">
+          <h3>Stay Motivated!</h3>
+          <p id="motivationText">
+            Start your first workout today and build momentum one session at a time.
+          </p>
+
+          <div id="recentPreview" class="recent-preview">
+            <p>No workouts saved yet.</p>
+          </div>
+
+          <a class="button button-alt small-button" href="workout.html">Open Workout Log</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 LiftLog | Built by Austin Sego for WDD131</p>
+  </footer>
+</body>
+</html>
