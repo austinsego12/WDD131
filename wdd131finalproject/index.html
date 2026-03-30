@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +32,9 @@
   <main id="main" class="page-shell">
     <section class="panel hero-panel">
       <div class="hero-image-box">
-        <img src="images/hero.png" alt="Workout illustration">
+        <img src="images/hero.png" alt="Man performing a squat in a gym">
         <div class="hero-text-overlay">
           <h1>Build Strength. Track Progress.<br>Stay Consistent.</h1>
-          <div class="hero-image-label">Hero Image</div>
         </div>
       </div>
 
@@ -45,43 +45,44 @@
     </section>
 
     <section class="panel features-panel">
-      <div class="feature-grid">
-        <article class="feature-card">
-          <div class="feature-icon">🖼️</div>
-          <h2>Feature</h2>
-          <p>Track daily workouts and exercise details.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">🖼️</div>
-          <h2>Feature</h2>
-          <p>Browse exercises by muscle group.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">🖼️</div>
-          <h2>Feature</h2>
-          <p>Save your progress directly in the browser.</p>
-        </article>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <div class="feature-icon">
+        <img src="images/log-icon.png" alt="Workout log icon">
       </div>
-    </section>
+      <h2>Log Workouts</h2>
+      <p>Record your exercises, reps, sets, and notes so every session counts.</p>
+    </article>
+
+    <article class="feature-card">
+      <div class="feature-icon">
+        <img src="images/exercise-icon.png" alt="Exercise library icon">
+      </div>
+      <h2>Exercise Ideas</h2>
+      <p>Pick from helpful exercise suggestions to build your next workout faster.</p>
+    </article>
+
+    <article class="feature-card">
+      <div class="feature-icon">
+        <img src="images/progress-icon.png" alt="Progress tracking icon">
+      </div>
+      <h2>See Progress</h2>
+      <p>Watch your workout totals grow and stay motivated as you improve.</p>
+    </article>
+  </div>
+</section>
 
     <section id="progress" class="panel progress-panel">
       <h2 class="section-title">Progress Overview</h2>
       <div class="progress-grid">
         <div class="chart-box">
-          <div class="fake-chart">
-            <span class="chart-line line1"></span>
-            <span class="chart-line line2"></span>
-            <span class="chart-line line3"></span>
-            <span class="chart-line line4"></span>
-            <span class="chart-line line5"></span>
-          </div>
+          <img src="images/graph.png" alt="Workout progress graph" class="progress-graph">
         </div>
 
         <aside class="motivation-card">
           <h3>Stay Motivated!</h3>
           <p id="motivationText">Start your first workout today and build momentum one session at a time.</p>
+
           <div class="stats-preview">
             <p><strong>Total Workouts:</strong> <span id="totalWorkouts">0</span></p>
             <p><strong>Total Sets:</strong> <span id="totalSets">0</span></p>
