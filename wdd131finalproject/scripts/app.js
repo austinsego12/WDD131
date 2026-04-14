@@ -1,4 +1,4 @@
-// scripts/appjs.js
+
 const STORAGE_KEY = "liftlogWorkouts";
 
 const exerciseCatalog = [
